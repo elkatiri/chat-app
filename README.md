@@ -33,4 +33,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+### Quick Deployment Steps
+
+1. **Push your code to GitHub**
+2. **Import to Vercel** - Connect your GitHub repository
+3. **Add Environment Variables** in Vercel project settings:
+   - `MONGODB_URI` - Your MongoDB connection string
+   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` - Your Clerk publishable key
+   - `CLERK_SECRET_KEY` - Your Clerk secret key
+   - `CLERK_WEBHOOK_SECRET` - Your Clerk webhook signing secret
+   - `NEXT_PUBLIC_APP_URL` - Your Vercel deployment URL (optional)
+
+4. **Configure Clerk Webhooks** - Point to `https://your-domain.vercel.app/api/webhooks/clerk`
+
+5. **Deploy** - Vercel will automatically deploy your app
+
+📖 **For detailed deployment instructions, see [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md)**
+
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
